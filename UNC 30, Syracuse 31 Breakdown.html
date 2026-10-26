@@ -1,0 +1,586 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>UNC 30, Syracuse 31 Breakdown</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap">
+<style>
+/* Layout: scoreboard hero, then sections with a sticky heading rail beside a 42rem reading column; wide modules (box score, report card) span the full width. */
+:root {
+  --bg: #F3F6F9;
+  --surface: #FFFFFF;
+  --fg: #14202E;
+  --muted: #53647A;
+  --rule: #D3DCE6;
+  --unc: #4B9CD3;
+  --unc-ink: #1D5C91;
+  --opp: #8D9AAB;
+  --hero-bg: #0E2340;
+  --hero-fg: #F2F6FA;
+  --hero-muted: #9DB3CC;
+  --hero-rule: #2A4468;
+  --g-bplus-bg: #1F7A5A; --g-bplus-fg: #FFFFFF;
+  --g-b-bg: #2B6CA3;     --g-b-fg: #FFFFFF;
+  --g-bminus-bg: #5E7691; --g-bminus-fg: #FFFFFF;
+  --g-cplus-bg: #9A6212; --g-cplus-fg: #FFFFFF;
+  --g-c-bg: #A04E14;     --g-c-fg: #FFFFFF;
+  --g-dplus-bg: #A33A2A; --g-dplus-fg: #FFFFFF;
+  --g-d-bg: #8F1D2C;     --g-d-fg: #FFFFFF;
+  --font-display: "Big Shoulders Display", "Arial Narrow", Impact, sans-serif;
+  --font-body: "Newsreader", Georgia, "Times New Roman", serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0B1521; --surface: #122033; --fg: #E2E9F1; --muted: #93A5BA; --rule: #25364B;
+    --unc: #6DB4E6; --unc-ink: #8CC4EE; --opp: #6B7C92;
+    --hero-bg: #07111F; --hero-fg: #F2F6FA; --hero-muted: #8FA6C0; --hero-rule: #1F3552;
+    --g-bplus-bg: #47C79B; --g-bplus-fg: #05231A;
+    --g-b-bg: #7FB8E8;     --g-b-fg: #0A2036;
+    --g-bminus-bg: #9BB0C8; --g-bminus-fg: #121F2E;
+    --g-cplus-bg: #E0A94A; --g-cplus-fg: #2A1B04; --g-c-bg: #E8944A; --g-c-fg: #2E1503; --g-dplus-bg: #F08A74; --g-dplus-fg: #3A0F08; --g-d-bg: #F5808F; --g-d-fg: #3D0A14;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0B1521; --surface: #122033; --fg: #E2E9F1; --muted: #93A5BA; --rule: #25364B;
+  --unc: #6DB4E6; --unc-ink: #8CC4EE; --opp: #6B7C92;
+  --hero-bg: #07111F; --hero-fg: #F2F6FA; --hero-muted: #8FA6C0; --hero-rule: #1F3552;
+  --g-bplus-bg: #47C79B; --g-bplus-fg: #05231A;
+  --g-b-bg: #7FB8E8;     --g-b-fg: #0A2036;
+  --g-bminus-bg: #9BB0C8; --g-bminus-fg: #121F2E;
+  --g-cplus-bg: #E0A94A; --g-cplus-fg: #2A1B04; --g-c-bg: #E8944A; --g-c-fg: #2E1503; --g-dplus-bg: #F08A74; --g-dplus-fg: #3A0F08; --g-d-bg: #F5808F; --g-d-fg: #3D0A14;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--unc-ink); }
+a:focus-visible { outline: 3px solid var(--unc); outline-offset: 3px; border-radius: 2px; }
+
+.wrap {
+  max-width: 74rem;
+  margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+
+/* ---------- Hero ---------- */
+.hero { background: var(--hero-bg); color: var(--hero-fg); }
+.hero .wrap {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: 2rem 4rem;
+  align-items: end;
+  padding-block: clamp(2rem, 6vw, 4.5rem);
+}
+.hero-kicker {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.15rem;
+  letter-spacing: 0.02em;
+  color: var(--hero-muted);
+  margin: 0 0 0.5rem;
+}
+h1 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(3.6rem, 11vw, 7.5rem);
+  line-height: 0.88;
+  letter-spacing: -0.01em;
+  margin: 0 0 1.25rem;
+  text-wrap: balance;
+}
+.hero-sub { margin: 0; color: var(--hero-muted); font-size: 1.05rem; max-width: 30rem; }
+
+.linescore { width: 100%; border-collapse: collapse; font-family: var(--font-display); font-variant-numeric: tabular-nums; }
+.linescore caption { text-align: left; color: var(--hero-muted); font-family: var(--font-body); font-size: 0.9rem; padding-bottom: 0.5rem; }
+.linescore th, .linescore td { text-align: center; padding: 0.35rem 0.25rem; }
+.linescore thead th { font-weight: 600; font-size: 1.05rem; color: var(--hero-muted); border-bottom: 1px solid var(--hero-rule); }
+.linescore thead th:first-child { text-align: left; }
+.linescore tbody th { text-align: left; font-weight: 700; font-size: 1.5rem; letter-spacing: 0.02em; }
+.linescore tbody td { font-size: 1.7rem; font-weight: 600; color: var(--hero-muted); }
+.linescore tbody td.tot { font-size: 3.2rem; font-weight: 800; line-height: 1; color: var(--hero-fg); padding-left: 0.6rem; }
+.linescore tbody tr.unc th, .linescore tbody tr.unc td.tot { color: var(--unc); }
+.linescore tbody tr.win td, .linescore tbody tr.win th { color: var(--hero-fg); }
+.linescore tbody tr + tr th, .linescore tbody tr + tr td { border-top: 1px solid var(--hero-rule); }
+.records { display: flex; flex-wrap: wrap; gap: 0.25rem 1.5rem; margin: 1rem 0 0; padding: 0; list-style: none; font-size: 0.95rem; color: var(--hero-muted); }
+.records b { color: var(--hero-fg); font-weight: 600; }
+.byline { margin: 1.1rem 0 0; font-size: 0.95rem; color: var(--hero-muted); }
+
+/* ---------- Nav ---------- */
+.jump { border-bottom: 1px solid var(--rule); background: var(--surface); }
+.jump .wrap { display: flex; flex-wrap: wrap; gap: 0.25rem 1.75rem; padding-block: 0.8rem; }
+.jump a {
+  font-family: var(--font-display); font-weight: 600; font-size: 1.1rem; letter-spacing: 0.02em;
+  text-decoration: none; color: var(--muted); padding: 0.1rem 0;
+}
+.jump a:hover { color: var(--unc-ink); text-decoration: underline; text-underline-offset: 4px; }
+
+/* ---------- Sections ---------- */
+.section { scroll-margin-top: 1rem; }
+.section > .wrap {
+  display: grid;
+  grid-template-columns: minmax(0, 13rem) minmax(0, 42rem);
+  gap: 1.25rem 4.5rem;
+  padding-block: clamp(2.25rem, 5vw, 4rem);
+  border-top: 1px solid var(--rule);
+}
+.section:first-of-type > .wrap { border-top: 0; }
+h2 {
+  font-family: var(--font-display); font-weight: 800;
+  font-size: clamp(1.9rem, 3.4vw, 2.6rem); line-height: 1; letter-spacing: 0.005em;
+  margin: 0; text-wrap: balance;
+  position: sticky; top: 1.25rem; align-self: start;
+}
+.prose { display: flex; flex-direction: column; gap: 1.1rem; min-width: 0; }
+.prose p { margin: 0; text-wrap: pretty; }
+.lede { font-size: 1.2rem; line-height: 1.55; }
+h3 {
+  font-family: var(--font-display); font-weight: 700; font-size: 1.55rem; line-height: 1.1; letter-spacing: 0.01em;
+  margin: 1.25rem 0 0; text-wrap: balance;
+}
+h3.q { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 0.2rem 1rem; padding-bottom: 0.45rem; border-bottom: 2px solid var(--unc); }
+h3.q .score { font-weight: 600; font-size: 1.2rem; color: var(--unc-ink); font-variant-numeric: tabular-nums; }
+.prose > h3:first-child { margin-top: 0; }
+
+/* ---------- Box score ---------- */
+.numbers { background: var(--surface); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.numbers .wrap {
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 2.5rem 4rem;
+  padding-block: clamp(2rem, 4.5vw, 3.25rem);
+}
+.numbers h2 { position: static; font-size: 1.7rem; margin-bottom: 1rem; }
+.legend { display: flex; justify-content: space-between; font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; margin-bottom: 0.4rem; }
+.legend .u { color: var(--unc-ink); }
+.legend .o { color: var(--muted); }
+.stat { padding: 0.55rem 0; border-top: 1px solid var(--rule); }
+.stat:first-of-type { border-top: 0; }
+.stat .lbl { text-align: center; font-size: 0.88rem; color: var(--muted); line-height: 1.2; margin-bottom: 0.25rem; }
+.stat .row { display: grid; grid-template-columns: 4rem minmax(0, 1fr) minmax(0, 1fr) 4rem; align-items: center; gap: 0 0.5rem; }
+.stat .v { font-family: var(--font-display); font-weight: 700; font-size: 1.2rem; font-variant-numeric: tabular-nums; line-height: 1; white-space: nowrap; }
+.stat .v.u { text-align: right; }
+.stat .v.o { text-align: left; color: var(--muted); }
+.stat .bar { height: 0.6rem; display: flex; }
+.stat .bar i { display: block; height: 100%; border-radius: 1px; }
+.stat .bar.l { justify-content: flex-end; }
+.stat .bar.l i { background: var(--unc); }
+.stat .bar.r i { background: var(--opp); }
+
+.plays { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; font-size: 0.97rem; }
+.plays th { text-align: left; font-family: var(--font-display); font-weight: 600; font-size: 1rem; color: var(--muted); padding: 0 0.5rem 0.35rem 0; border-bottom: 1px solid var(--rule); }
+.plays th.n, .plays td.n { text-align: right; }
+.plays td { padding: 0.55rem 0.5rem 0.55rem 0; border-bottom: 1px solid var(--rule); vertical-align: top; line-height: 1.35; }
+.plays td.when { white-space: nowrap; color: var(--muted); width: 4.6rem; }
+.plays td.n { font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; padding-right: 0; width: 2.4rem; }
+.plays td.n.lead { color: var(--unc-ink); }
+.plays .tag { font-family: var(--font-display); font-weight: 700; margin-right: 0.35rem; }
+.plays .tag.u { color: var(--unc-ink); }
+.plays .tag.o { color: var(--muted); }
+.table-scroll { overflow-x: auto; }
+
+/* ---------- Grades ---------- */
+.grade {
+  display: inline-flex; align-items: center; justify-content: center; flex: none;
+  min-width: 2.7rem; height: 2.7rem; padding: 0 0.45rem; border-radius: 4px;
+  font-family: var(--font-display); font-weight: 800; font-size: 1.55rem; line-height: 1; letter-spacing: 0.01em;
+}
+.g-bplus { background: var(--g-bplus-bg); color: var(--g-bplus-fg); }
+.g-b { background: var(--g-b-bg); color: var(--g-b-fg); }
+.g-bminus { background: var(--g-bminus-bg); color: var(--g-bminus-fg); }
+.g-cplus { background: var(--g-cplus-bg); color: var(--g-cplus-fg); }
+.g-c { background: var(--g-c-bg); color: var(--g-c-fg); }
+.g-dplus { background: var(--g-dplus-bg); color: var(--g-dplus-fg); }
+.g-d { background: var(--g-d-bg); color: var(--g-d-fg); }
+
+.gradegrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(11.5rem, 1fr)); gap: 0.5rem; margin: 0; padding: 0; list-style: none; }
+.gradegrid a {
+  display: flex; align-items: center; gap: 0.7rem; padding: 0.5rem 0.7rem 0.5rem 0.5rem;
+  background: var(--surface); border: 1px solid var(--rule); border-radius: 6px;
+  color: var(--fg); text-decoration: none; font-family: var(--font-display); font-weight: 600; font-size: 1.15rem;
+}
+.gradegrid a:hover { border-color: var(--unc); }
+.gradegrid .grade { min-width: 2.3rem; height: 2.3rem; font-size: 1.3rem; }
+
+h3.pg { display: flex; align-items: center; gap: 0.85rem; margin-top: 1.75rem; scroll-margin-top: 1rem; }
+.keys { display: flex; flex-wrap: wrap; gap: 0.15rem 1.25rem; margin: -0.3rem 0 0; padding: 0; list-style: none; font-family: var(--font-display); font-weight: 600; font-size: 1.02rem; color: var(--unc-ink); }
+.keys li { white-space: nowrap; }
+
+/* ---------- Report card ---------- */
+.verdict { display: flex; gap: 1.1rem; align-items: flex-start; padding: 1.1rem 1.25rem; background: var(--surface); border: 1px solid var(--rule); border-radius: 8px; }
+.verdict .grade { min-width: 4rem; height: 4rem; font-size: 2.4rem; }
+.verdict p { margin: 0; }
+.report { width: 100%; border-collapse: collapse; font-size: 1rem; background: var(--surface); border: 1px solid var(--rule); }
+.report th, .report td { text-align: left; padding: 0.65rem 0.85rem; border-bottom: 1px solid var(--rule); vertical-align: middle; line-height: 1.4; }
+.report thead th { font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; color: var(--muted); }
+.report tbody th { font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; white-space: nowrap; }
+.report td.gr { width: 4.5rem; }
+.report .grade { min-width: 2.2rem; height: 2.2rem; font-size: 1.2rem; }
+.report-wrap { overflow-x: auto; }
+
+/* ---------- Narrow ---------- */
+@media (max-width: 62rem) {
+  .hero .wrap { grid-template-columns: minmax(0, 1fr); }
+  .numbers .wrap { grid-template-columns: minmax(0, 1fr); }
+  .section > .wrap { grid-template-columns: minmax(0, 1fr); }
+  h2 { position: static; }
+}
+@media (max-width: 30rem) {
+  body { font-size: 1rem; }
+  .lede { font-size: 1.1rem; }
+  .linescore tbody td.tot { font-size: 2.8rem; }
+  .stat .row { grid-template-columns: 3.4rem minmax(0, 1fr) minmax(0, 1fr) 3.4rem; }
+  .report tbody th { white-space: normal; }
+}
+</style>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <p class="hero-kicker">Post-game breakdown</p>
+      <h1>UNC 30, Syracuse 31</h1>
+      <p class="hero-sub">Overtime. Kenan Stadium, Chapel Hill, Saturday, October 24, 2026.</p>
+      <p class="byline">October 26, 2026, by Matthew Zammit</p>
+    </div>
+    <div>
+      <table class="linescore">
+        <caption>Final, by quarter</caption>
+        <thead><tr><th scope="col">Team</th><th scope="col">1</th><th scope="col">2</th><th scope="col">3</th><th scope="col">4</th><th scope="col">OT</th><th scope="col">F</th></tr></thead>
+        <tbody>
+          <tr class="unc"><th scope="row">UNC</th><td>10</td><td>3</td><td>7</td><td>3</td><td>7</td><td class="tot">30</td></tr>
+          <tr class="win"><th scope="row">Syracuse</th><td>0</td><td>10</td><td>0</td><td>13</td><td>8</td><td class="tot">31</td></tr>
+        </tbody>
+      </table>
+      <ul class="records">
+        <li><b>UNC</b> 4-3, 2-2 ACC</li>
+        <li><b>Syracuse</b> 3-4, 1-4 ACC</li>
+        <li>Orange end an 11-game ACC losing streak</li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<nav class="jump" aria-label="Sections">
+  <div class="wrap">
+    <a href="#brief">The game in brief</a>
+    <a href="#unfolded">How it unfolded</a>
+    <a href="#lost">Where UNC lost</a>
+    <a href="#improve">Areas for improvement</a>
+    <a href="#grades">Position grades</a>
+    <a href="#report">Report card</a>
+  </div>
+</nav>
+
+<main>
+<section class="section" id="brief">
+  <div class="wrap">
+    <h2>The Game in Brief</h2>
+    <div class="prose">
+      <p class="lede">I'll say it plainly: North Carolina gave this one away. Syracuse beat the Tar Heels 31-30 in overtime at Kenan Stadium on Saturday night, and the Orange needed a replay review and about an inch of football to do it, but Carolina had the game in its hands for most of the evening. It led 10-0 and then 20-10. It scored 30 points, didn't turn the ball over once and took three penalties. And it still lost to a team that showed up 2-4, winless in the ACC and 11 conference games into a losing streak. I don't care how thin the roster was. You don't lose that game by accident, and you certainly don't lose it to a two-point play.</p>
+      <p>UNC is 4-3 overall and 2-2 in the ACC, and the bowl math just got uncomfortable. Syracuse is 3-4 and 1-4, and the only other win it has over an FBS team this year was a 42-41 overtime escape against UConn. The Orange are now 3-0 against Carolina in overtime games. Strength of schedule had Carolina 14th and Syracuse 64th going in, and I'll be honest, nothing on the field Saturday looked like a 50-spot gap. The difference between the two teams was a single play at the goal line, and Carolina's defense lost it after the offense spent four quarters making that play necessary.</p>
+      <p>I picked UNC 31, Syracuse 23 in the preview. Carolina did score 30, and Billy Edwards Jr. did throw for 271 yards, so on paper I was close. I still missed, and I missed on the two things I was most sure about. I said the quarterback gap wasn't close and I said the second half would belong to Carolina by a wide margin. Steve Angeli was the better quarterback when it mattered, and Syracuse won the second half 13-10 in regulation before taking the extra period. I was wrong about that.</p>
+      <p>What bugs me is that the box score is closer than the result. Syracuse out-gained UNC 455 yards to 372, ran 83 plays to 69, held the ball 31:25 to 28:35 and had 23 first downs to 20. But the yards per play were a dead heat, 5.5 for the Orange and 5.4 for the Tar Heels, and Carolina out-passed them 271 yards to 256. Nobody turned it over. Syracuse won on volume, 14 extra snaps, and every one of those snaps came against a Carolina defense that forced exactly one three-and-out, got one sack and two tackles for loss, and watched Syracuse run it 49 times.</p>
+      <p>The offense isn't off the hook either, and honestly it's the part I'm angriest about. Carolina scored three touchdowns and kicked three field goals, and two of those field goals came on drives that got inside the Syracuse 10. Make either one a touchdown, change nothing else, and Carolina wins in regulation. Instead Rece Verhoff kicked a 27-yarder after a 13-play drive in the first quarter and a 22-yarder with about seven minutes left, and Jordan Shipp said afterward that the missed red-zone chances were the main problem. He's right. The offense then scored three points on its last four possessions of regulation, a stretch that included two straight three-and-outs with a 10-point lead and a fourth-and-3 sack at the Syracuse 39 with 52 seconds left.</p>
+      <p>The roster was thin, and that belongs in the account. Wide receivers Mason Humphrey and Keeyun Chapman, defensive backs Tre Miller and Jakob Weatherspoon, defensive linemen Viliami Moala, Vodney Cleveland and Jimmy-Phrisco Alo-Suliafu and linebacker Ashton Blatt were all out, and defensive back Kaleb Cost was a game-time decision. Left guard Andrew Threatt left late in the second quarter. Syracuse has had quarterback injuries all season too, and Angeli still played and still won it. The injuries explain a worn-down defense to me. They don't explain an offense that couldn't close out a 10-point lead, and they don't explain a postgame press conference that lasted 2 minutes and 58 seconds. "They made a couple more plays than we did today, and that was the difference in the game," Bill Belichick said. Sure. That's a fair description of the score and a lousy description of the night.</p>
+    </div>
+  </div>
+</section>
+
+<section class="numbers" aria-label="Box score">
+  <div class="wrap">
+    <div>
+      <h2>Team stats</h2>
+      <div class="legend"><span class="u">UNC</span><span class="o">Syracuse</span></div>
+      <div class="stat"><div class="lbl">Total yards</div><div class="row"><span class="v u">372</span><span class="bar l"><i style="width:82%"></i></span><span class="bar r"><i style="width:100%"></i></span><span class="v o">455</span></div></div>
+      <div class="stat"><div class="lbl">Plays run</div><div class="row"><span class="v u">69</span><span class="bar l"><i style="width:83%"></i></span><span class="bar r"><i style="width:100%"></i></span><span class="v o">83</span></div></div>
+      <div class="stat"><div class="lbl">Yards per play</div><div class="row"><span class="v u">5.4</span><span class="bar l"><i style="width:98%"></i></span><span class="bar r"><i style="width:100%"></i></span><span class="v o">5.5</span></div></div>
+      <div class="stat"><div class="lbl">Rushing yards</div><div class="row"><span class="v u">101</span><span class="bar l"><i style="width:51%"></i></span><span class="bar r"><i style="width:100%"></i></span><span class="v o">199</span></div></div>
+      <div class="stat"><div class="lbl">Rushing plays (sacks included)</div><div class="row"><span class="v u">25</span><span class="bar l"><i style="width:51%"></i></span><span class="bar r"><i style="width:100%"></i></span><span class="v o">49</span></div></div>
+      <div class="stat"><div class="lbl">Passing yards</div><div class="row"><span class="v u">271</span><span class="bar l"><i style="width:100%"></i></span><span class="bar r"><i style="width:94%"></i></span><span class="v o">256</span></div></div>
+      <div class="stat"><div class="lbl">First downs</div><div class="row"><span class="v u">20</span><span class="bar l"><i style="width:87%"></i></span><span class="bar r"><i style="width:100%"></i></span><span class="v o">23</span></div></div>
+      <div class="stat"><div class="lbl">First downs by rushing</div><div class="row"><span class="v u">6</span><span class="bar l"><i style="width:46%"></i></span><span class="bar r"><i style="width:100%"></i></span><span class="v o">13</span></div></div>
+      <div class="stat"><div class="lbl">Time of possession</div><div class="row"><span class="v u">28:35</span><span class="bar l"><i style="width:91%"></i></span><span class="bar r"><i style="width:100%"></i></span><span class="v o">31:25</span></div></div>
+      <div class="stat"><div class="lbl">Red-zone pass attempts</div><div class="row"><span class="v u">8</span><span class="bar l"><i style="width:100%"></i></span><span class="bar r"><i style="width:38%"></i></span><span class="v o">3</span></div></div>
+      <div class="stat"><div class="lbl">Red-zone rushing attempts</div><div class="row"><span class="v u">2</span><span class="bar l"><i style="width:22%"></i></span><span class="bar r"><i style="width:100%"></i></span><span class="v o">9</span></div></div>
+      <div class="stat"><div class="lbl">Sacks taken</div><div class="row"><span class="v u">2 for 16</span><span class="bar l"><i style="width:100%"></i></span><span class="bar r"><i style="width:50%"></i></span><span class="v o">1 for 8</span></div></div>
+      <div class="stat"><div class="lbl">Three-and-outs by the offense</div><div class="row"><span class="v u">3</span><span class="bar l"><i style="width:100%"></i></span><span class="bar r"><i style="width:33%"></i></span><span class="v o">1</span></div></div>
+      <div class="stat"><div class="lbl">Field goals</div><div class="row"><span class="v u">3 of 3</span><span class="bar l"><i style="width:100%"></i></span><span class="bar r"><i style="width:33%"></i></span><span class="v o">1 of 1</span></div></div>
+      <div class="stat"><div class="lbl">Penalties</div><div class="row"><span class="v u">3-20</span><span class="bar l"><i style="width:31%"></i></span><span class="bar r"><i style="width:100%"></i></span><span class="v o">7-65</span></div></div>
+      <div class="stat"><div class="lbl">Turnovers</div><div class="row"><span class="v u">0</span><span class="bar l"><i style="width:0%"></i></span><span class="bar r"><i style="width:0%"></i></span><span class="v o">0</span></div></div>
+    </div>
+
+    <div>
+      <h2>Scoring</h2>
+      <div class="table-scroll">
+        <table class="plays">
+          <thead><tr><th scope="col">When</th><th scope="col">Play</th><th scope="col" class="n">UNC</th><th scope="col" class="n">Cuse</th></tr></thead>
+          <tbody>
+            <tr><td class="when">Q1 11:46</td><td><span class="tag u">UNC</span>Jordan Shipp 5-yard catch from Billy Edwards Jr., ending an 83-yard, seven-play drive</td><td class="n lead">7</td><td class="n">0</td></tr>
+            <tr><td class="when">Q1 2:03</td><td><span class="tag u">UNC</span>Rece Verhoff 27-yard field goal after a 13-play drive</td><td class="n lead">10</td><td class="n">0</td></tr>
+            <tr><td class="when">Q2 9:44</td><td><span class="tag o">Syr</span>Ahmad Miller 2-yard run, ending an 88-yard, 16-play drive</td><td class="n lead">10</td><td class="n">7</td></tr>
+            <tr><td class="when">Q2 2:45</td><td><span class="tag u">UNC</span>Verhoff 39-yard field goal</td><td class="n lead">13</td><td class="n">7</td></tr>
+            <tr><td class="when">Q2 0:01</td><td><span class="tag o">Syr</span>Shay Barker 30-yard field goal as the half expired</td><td class="n lead">13</td><td class="n">10</td></tr>
+            <tr><td class="when">Q3 8:34</td><td><span class="tag u">UNC</span>Demon June 25-yard run on fourth-and-1</td><td class="n lead">20</td><td class="n">10</td></tr>
+            <tr><td class="when">Q4 11:13</td><td><span class="tag o">Syr</span>Umari Hatcher 76-yard catch from Steve Angeli</td><td class="n lead">20</td><td class="n">17</td></tr>
+            <tr><td class="when">Q4 7:14</td><td><span class="tag u">UNC</span>Verhoff 22-yard field goal after a nine-play, 71-yard drive</td><td class="n lead">23</td><td class="n">17</td></tr>
+            <tr><td class="when">Q4 2:00</td><td><span class="tag o">Syr</span>Tylik Hill 3-yard run, ending a 75-yard, 11-play drive; Barker's extra point was wide left</td><td class="n">23</td><td class="n">23</td></tr>
+            <tr><td class="when">OT</td><td><span class="tag u">UNC</span>June 3-yard catch from Edwards on third down</td><td class="n lead">30</td><td class="n">23</td></tr>
+            <tr><td class="when">OT</td><td><span class="tag o">Syr</span>Calvin Russell III 4-yard catch from Angeli on fourth-and-goal, then a two-point catch by Russell, upheld on replay</td><td class="n">30</td><td class="n lead">31</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="unfolded">
+  <div class="wrap">
+    <h2>How the Game Unfolded</h2>
+    <div class="prose">
+      <p class="lede">Carolina led for all of regulation except the first three minutes and the last two, and it still lost. Looking back, I see five stretches that decided it: a first quarter that produced 10 points when it should have produced 14, the end of the first half, a 20-10 lead that went nowhere, a fourth quarter in which the Tar Heels scored three points, and an overtime that ended a few inches short of the goal line.</p>
+
+      <h3 class="q"><span>First quarter</span><span class="score">UNC 10, Syracuse 0</span></h3>
+      <p>The start was exactly what I wanted to see. Edwards completed his first 11 passes, for 98 yards and a touchdown, and every one of them came in the first quarter, the most completions in a quarter by a Carolina quarterback since Drake Maye in 2023. The opening drive went 83 yards in seven plays and 3:13 and ended with a 5-yard catch by Jordan Shipp, his second touchdown of the season and his second in as many weeks. For a few minutes it felt like Carolina expected to win this one comfortably, and so did I.</p>
+      <p>The second drive is the one I keep coming back to, because it set the pattern. Carolina ran 13 plays, got inside the Syracuse 10 and stalled, and Rece Verhoff kicked a 27-yard field goal with 2:03 left in the quarter. Thirteen snaps bought three points. Nothing went wrong in the usual sense, no turnover, no penalty, no sack. The offense simply ran out of ideas where the field gets short, and the game would take it back to that spot again and again.</p>
+      <p>Syracuse didn't score in the first quarter, and 10-0 made the Orange look overmatched. It also hid how little cushion Carolina had actually built. Two possessions produced 20 plays and 10 points, and the Tar Heels walked out of the quarter having already shown the one thing they couldn't fix.</p>
+
+      <h3 class="q"><span>Second quarter</span><span class="score">UNC 13, Syracuse 10 at halftime</span></h3>
+      <p>Syracuse came back to life with an 88-yard, 16-play drive that ended on Ahmad Miller's 2-yard run with 9:44 left in the half. Sixteen plays is a long time to be on the field without making one, and Carolina's defense never made one. The drive survived two fourth-down conversions, one of them a 25-yard run, and 25 yards of Syracuse penalties, and it made the Orange the sixth opponent this season to put together a drive of seven minutes or more against Carolina. Angeli wasn't pressured in the first half, so the Orange simply took all the time they were given. The touchdown cut it to 10-7.</p>
+      <p>This half also had two plays the secondary has to want back. Defensive backs Ade Willie and Jaden Patterson each had an interception in his hands in the first half and dropped it, and Willie's came with a clear path to the end zone. Both would have handed the ball to an offense that had started 11 for 11, and either one could have turned a one-possession game into a two-possession game by halftime. I don't think those are complicated to evaluate. You catch them or you lose close games, and Carolina didn't catch them.</p>
+      <p>Verhoff's 39-yard field goal with 2:45 left made it 13-7, and then came the sequence I think actually decided the half. Syracuse took the ball with 2:45 left and used all of it, finishing with Shay Barker's 30-yard field goal on the last snap of the half. That's a three-point drive, but it burned the entire two-minute window, cut the lead to three and gave the Orange the first possession of the second half. They'd been the better team for most of the previous 20 minutes, and they knew it.</p>
+      <p>Carolina scored three points in the second quarter and Syracuse scored 10. Left guard Andrew Threatt left late in the quarter. The offense that looked unstoppable for 15 minutes went into the locker room with one field goal to show for the next 15.</p>
+
+      <h3 class="q"><span>Third quarter</span><span class="score">UNC 20, Syracuse 10</span></h3>
+      <p>Carolina's one real stretch of offense after the break came early in the third, and it nearly turned into something better. Demon June had carried five times for 18 yards in the first half. Then a drive put the Tar Heels deep in Syracuse territory, and Jordan Washington dropped what would have been a walk-in touchdown in the end zone. A drive that should have ended with seven points was suddenly a fourth-and-1.</p>
+      <p>Belichick went for it, and June ran 25 yards for the touchdown with 8:34 left in the quarter. I liked the call and I liked the result, and it turned a wasted drive into a 20-10 lead with 23 minutes and 34 seconds left in regulation. Everything after that makes the number look like a taunt.</p>
+      <p>Syracuse went for it on fourth-and-short with 4:24 left in the quarter and was stopped. That gave Carolina the ball with a 10-point lead and a chance to bury the game, and the Tar Heels spent it on a third-down sack that cost double-digit yards, and then a punt. Jalon Thompson nearly intercepted a Syracuse pass later in the quarter, another takeaway that Carolina's defense came close to getting and didn't.</p>
+      <p>If you made me pick the single most important stretch of the night, it'd be this one. Carolina was up 10, Syracuse had just failed on fourth down and the Tar Heels had a free possession to spend. They spent it on a sack and a punt, and they never scored another touchdown in regulation.</p>
+
+      <h3 class="q"><span>Fourth quarter</span><span class="score">UNC 23, Syracuse 23</span></h3>
+      <p>The fourth quarter opened with Syracuse making another run at the Carolina end zone. With 12:08 left, the Orange went for it on fourth down in Carolina territory and the pass was dropped, their second failed fourth-down try in a row. That handed Carolina's offense the ball with a 10-point lead and nearly a full quarter to run clock. The Tar Heels went three-and-out for the second time in a row. Fifty-five seconds after the stop, Syracuse had a touchdown.</p>
+      <p>The touchdown came off a play fake. Safety Greg Smith III overran the play, and Angeli found Umari Hatcher for 76 yards and a score with 11:13 left. It was the longest play Carolina's defense has allowed all season, and it cut the lead to 20-17. Hatcher, who arrived fourth nationally in receiving yards with 784, had been mostly held in check until then. When Belichick was asked about Syracuse's fourth-quarter passing, he pointed to that one pass. "If you take that play out of there, it's probably about the same, isn't it?" he said. I'd say that's a generous reading of a game in which Syracuse ran 83 plays.</p>
+      <p>Carolina answered with a 71-yard, nine-play drive that carried it to first-and-goal at the Syracuse 6, with big gains to Shipp and Trech Kekahuna doing most of the work. Then it stalled. Edwards missed open receivers on second and third down from inside the 5, and Verhoff kicked a 22-yard field goal for a 23-17 lead with a little over seven minutes left. That was a six-point lead instead of a 10-point lead, and it gave Syracuse a clean look at a drive that could tie it or win it.</p>
+      <p>Syracuse answered with a 75-yard, 11-play drive that ended on Tylik Hill's 3-yard run with two minutes left. The Orange got the touchdown but not the point. Barker's extra try went wide left, and it was tied at 23 instead of Syracuse leading by one. Carolina got the ball back with under two minutes in a tied game, which was a better spot than the previous 58 minutes had earned it.</p>
+      <p>That tying drive bothers me more than the long touchdown. The Orange went 75 yards in 11 plays, nearly seven yards a snap, and took just over five minutes off the clock between the field goal and the touchdown. It was the defensive version of the first-quarter field goal drive, a long march with no dramatic moment and no point at which Carolina's defense found a way to end it. Syracuse had been stopped on fourth down on consecutive possessions earlier in the half, and it still had enough left to go the length of the field when it mattered.</p>
+      <p>The final regulation drive ended on fourth-and-3 from the Syracuse 39 with 52 seconds left. Carolina had taken over with about 110 seconds and a timeout after Syracuse's missed extra point, and Belichick chose not to try a 56-yard field goal with a kicker who had made all three of his attempts. Edwards was sacked for a 2-yard loss. Carolina had scored three points on its last four possessions of regulation, and the last play it called was a sack. Syracuse pushed once more, but Peyton Seelmann got home on a well-timed blitz, the defense's only sack of the night, and a final heave fell short.</p>
+
+      <h3 class="q"><span>Overtime</span><span class="score">Syracuse 31, UNC 30</span></h3>
+      <p>Carolina took the ball first and, for one drive, looked like the team from the first quarter. Edwards hit Shipp for 20 yards to the Syracuse 5, and on third down he found June for a 3-yard touchdown. Verhoff's extra point made it 30-23. I'd be lying if I said I didn't think it was over.</p>
+      <p>Syracuse got a 16-yard completion from Angeli to Calvin Russell III to the UNC 9. McDonald and Jaylen Harvey stopped Miller for a 2-yard loss, and Carolina's defense still couldn't keep the Orange out of the end zone on fourth-and-goal. Angeli threw a 4-yard touchdown to Russell, and Fran Brown sent his offense back out for two instead of kicking the tie. Angeli rolled out and found Russell at the pylon. The officials reviewed it and upheld the call. McDonald said afterward that it was "literally an inch away from being a stop."</p>
+      <p>Belichick said he was on the other side of the field and couldn't see much. Carolina needed two stops in overtime, one on fourth-and-goal and one on the two-point try, and it made neither. People will argue about that inch for a week. I'd argue that a better defense never has to.</p>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="lost">
+  <div class="wrap">
+    <h2>Where UNC Lost the Game</h2>
+    <div class="prose">
+      <p class="lede">I count eleven things that lost this game for Carolina, and none of them was bad luck. The Tar Heels didn't turn the ball over, didn't get buried by penalties and didn't fall behind early. They lost because they kept making the decision or the play that left the door open, and a 2-4 team with an 11-game conference losing streak was patient enough to walk through it.</p>
+
+      <h3>Two field goals that should have been touchdowns</h3>
+      <p>Carolina kicked three field goals, and two of them were failures of the drive, not successes of the kicker. The first came in the first quarter after 13 plays that ended inside the Syracuse 10. The second came with a little over seven minutes left, after a 71-yard, nine-play drive reached first-and-goal at the 6 and then stalled on two incompletions from inside the 5. Each one left four points on the field, and because Carolina lost by one, either one is the game. Turn the first into a touchdown, leave everything else alone, and the Tar Heels win in regulation, 27-23. Turn the second into one and Carolina leads 27-17 with seven minutes left, so Hill's late touchdown only makes it 27-23, with or without the missed extra point.</p>
+      <p>This is where I have the biggest problem with the play-calling. The official numbers count eight Carolina pass attempts in the red zone and two rushes. Syracuse, in the same territory, ran nine times and threw three, and its three short touchdowns came from 2, 3 and 4 yards. Carolina had a sophomore, Jaylen McGill, averaging 5.2 yards a carry and a junior, Demon June, who had just scored from 25 yards out on fourth-and-1. Washington's dropped walk-in touchdown in the third quarter should have been a lesson, because June's carry on the same drive went 25 yards for the score. Shipp was right to call the missed red-zone chances the main problem. I just don't understand why the staff trusted the passing game inside the 20 four times as often as it trusted the run.</p>
+
+      <h3>A 10-point lead and nothing to do with it</h3>
+      <p>Carolina led by 10 twice, at 10-0 in the first quarter and at 20-10 in the third, and it led for roughly 55 of the 60 minutes of regulation. The second lead is the one that cost the game. Syracuse went for it on fourth-and-short late in the third quarter and was stopped. It went for it again early in the fourth, with 12:08 left, and a pass was dropped. That's two straight possessions where the Orange were turned away and Carolina was handed the ball with a two-score lead and most of a quarter to run the clock.</p>
+      <p>What did the Tar Heels do with them? A sack and a punt the first time, a three-and-out the second. Then Syracuse snapped the ball and threw a 76-yard touchdown. Over its last four possessions in regulation Carolina punted, punted, kicked a field goal and turned the ball over on downs, for three points in the final 23 minutes of regulation. For the game, Carolina called 23 runs and 46 dropbacks (the official ledger counts the two sacks as rushes, which is how it lists 25), a 33 percent run rate for a team that spent almost the whole night in front. When your defense is gassed and the lead is intact, you finish by making the other defense tackle your backs. Carolina barely tried it, with McGill at 5.2 a carry and a quarterback who, after the first quarter, was completing less than half of his passes.</p>
+
+      <h3>The second-half problem, a third time</h3>
+      <p>None of this was new, and I said as much in the preview. Carolina led Clemson 17-6 at halftime and lost 28-20, outscored 22-3 after the break. It led Duke 17-0, then trailed 20-17 late in the fourth quarter before Jaylen McGill's 24-yard run rescued it. Against Syracuse it led 13-10 at the half and 20-10 in the third quarter and scored 10 points after halftime in regulation. Put the three games together and Carolina has scored 47 points in first halves against 23, and 20 points in second halves against 48. A team that is 24 points better before halftime and 28 points worse after it doesn't have a talent problem in my view. It has an adjustment problem, and adjustments belong to the staff.</p>
+      <p>The defense faded the same way. It allowed 10 points before halftime on Saturday and 21 after it, counting overtime. Angeli went from 9-of-20 for 83 yards through three quarters to 11-of-14 for 173 over the fourth quarter and overtime, and a front that had been tired for a while never got him off his spot. The two failures fed each other. Every wasted Carolina possession put the defense back on the field, and every long Syracuse drive left the offense with fewer snaps to fix it.</p>
+
+      <h3>The 76-yard touchdown and a pass rush that never showed up</h3>
+      <p>Umari Hatcher's 76-yard touchdown was the longest play Carolina's defense had allowed all season, and it came 55 seconds after Syracuse's failed fourth down, right after a Carolina three-and-out. Belichick pointed to it afterward as the difference, and I get why. Through three quarters Angeli was 9-of-20 for 83 yards. After that he was 11-of-14 for 173. Take out the 76-yarder and it's still 10-of-13 for 97 yards on the other throws, a 77 percent completion rate against a defense that had held him under 50 percent for three quarters.</p>
+      <p>To me that's the real problem, because it says Syracuse didn't need a trick to beat Carolina. It needed time, and Carolina gave it away. The Tar Heels finished with one sack and one quarterback hit against 34 Syracuse pass attempts. Angeli wasn't pressured in the first half, and over the whole game he was barely touched. Melkart Abou Jaoude, who had 10.5 sacks last season, finished with three total tackles and little effect on the quarterback, and nobody else in the group, Xavier Lewis and Jaylen Harvey included, changed that. When you can only bring one rusher home against a passer with no pocket pressure, your coverage has to be perfect. It wasn't.</p>
+
+      <h3>A defense that couldn't get off the field</h3>
+      <p>Syracuse ran 83 plays to Carolina's 69, including 49 rushes, and held the ball for 31:25. Ahmad Miller carried 30 times for 125 yards. The first touchdown drive went 88 yards in 16 plays, and the tying drive went 75 in 11. The Orange averaged only 4.1 yards on their 49 rushes and their longest run was 25, so nobody was getting gashed. They just kept moving the chains. Thirteen of their 23 first downs came on the ground, against six of Carolina's 20, and the Orange wore the Tar Heels down one hard-earned four-yard run at a time, because Carolina's defense forced exactly one three-and-out all night and recorded two tackles for loss on 83 snaps.</p>
+      <p>The tackling looked like fatigue. Carolina was credited with 98 tackles, 68 of them assists, and Derek McDonald, a Syracuse transfer facing his old team for the first time, had 16 of them and a key tackle for loss in overtime. McDonald himself pointed afterward to fundamentals: tackling, containing yards after contact, coverage and eye discipline. A defense missing three defensive linemen, a linebacker and two defensive backs is going to wear down, and I won't pretend otherwise. But it doesn't explain a 16-play touchdown drive and a two-minute field goal drive in the first half, when everyone was still fresh.</p>
+
+      <h3>The fourth-and-3 call</h3>
+      <p>The game was tied with 52 seconds left and the ball sat at the Syracuse 39. Belichick had a kicker who was a perfect 3-for-3 on the night, including a 39-yarder, and a 56-yard attempt that would have put Carolina ahead with under a minute left if it went in. He went for it on fourth-and-3 instead. His reasoning afterward was that a miss would have put Syracuse about seven yards closer to field-goal range, and that it "felt like we had a good play." Carolina had about 110 seconds and a timeout when the drive began. Edwards was sacked for a 2-yard loss.</p>
+      <p>I'll be fair to him. The call didn't lose the game, because Syracuse didn't score. A converted fourth down would have given Carolina a first down around the Syracuse 36, still needing a long field goal with the clock running down, so the success case wasn't clearly better than kicking. What I can't defend is the failure case. It put the game in the hands of an offense that had scored three points in its previous 23 minutes of regulation, and in the hands of a quarterback who had been 16-of-33 since the first quarter. The game was tied and overtime was waiting. I'd have kicked it, and I think most people would have.</p>
+
+      <h3>An offense that went from 11-for-11 to 16-for-33</h3>
+      <p>Edwards threw for 271 yards, a season high, completed 27 of 44 passes and didn't throw an interception. That's the box score. The game is that he completed his first 11 passes for 98 yards and a touchdown and then went 16-of-33 for 173 yards and one touchdown, which is 48 percent. He missed open receivers who would have extended drives, short-hopped throws because of his footwork and took two sacks for 16 yards at the worst possible times. His longest completion was 28 yards, which was also the longest play of Carolina's whole offensive night. The offense never produced a play of 30 yards, and Syracuse produced one of 76.</p>
+      <p>It also ran through two players. Shipp caught eight for 102 yards and a touchdown and tight end Jelani Thurman caught seven for 77, which is 15 of Carolina's 27 catches and 179 of its 271 yards. Everybody else combined for 12 catches and 92 yards. With Humphrey and Chapman out, Syracuse could sit on the two obvious targets and the third and fourth options never scared anybody. The result was a first quarter that looked like a rout and a second half that looked like a staff trying to protect a lead with one hand tied behind its back.</p>
+
+      <h3>Overtime: two stops, neither made</h3>
+      <p>Carolina scored first in overtime, which meant Syracuse had to answer and Carolina needed its defense to make two plays. It needed a stop on fourth-and-goal from the 4, and it needed a stop on the two-point try. McDonald and Harvey had stuffed Miller for a 2-yard loss earlier in the series, and Carolina still allowed Angeli to throw the touchdown. Then Angeli rolled out, Russell caught it at the pylon, and the officials upheld the call on review. McDonald said the stop was an inch away. Belichick said he couldn't see.</p>
+      <p>Syracuse is now 3-0 against Carolina in overtime games. Carolina has been decided by one score in five of its last seven games and is 3-2 in them, which Belichick described afterward as "playing teams that are pretty evenly matched." I read that as the Tar Heels spending most of the season one or two plays from being a different team, and on Saturday the plays went the other way. They didn't lose to a freak play. They lost to a two-point try decided by an inch, and by then the offense and defense had given the Orange every other margin they needed.</p>
+
+      <h3>A clean game that still lost</h3>
+      <p>This is the part that should bother Carolina most. The Tar Heels didn't turn the ball over, and neither did Syracuse. Carolina took three penalties for 20 yards, while the Orange took seven for 65, so Syracuse gave away 45 more yards of penalties and still won. The Orange entered last in the FBS in both flags per game (10.17) and penalty yards (roughly 94 to 98), and the preview leaned on the idea that they would beat themselves. They didn't, and they didn't need to. Carolina's kicker was perfect, its net punting average beat Syracuse's, and Syracuse's kicker missed an extra point. Turnovers, penalties and kicking are the things coaches usually say decide close games, and they were even or tilted toward Carolina. That leaves play-calling, execution, tackling and conditioning, which a staff controls.</p>
+      <p>Carolina also got gifts. Syracuse was stopped on fourth down late in the third quarter, stopped again early in the fourth on a dropped pass, and then missed the extra point that would have given it a one-point lead with two minutes left. Three separate times in roughly the last 20 minutes of regulation the Orange handed Carolina something, and the Tar Heels turned those three gifts into zero points. If you want to be taken seriously as a program on the rise, you can't leave that much on the table. In a game with no turnovers and almost no penalties, Carolina had every chance to make the result about talent and preparation, and the result said otherwise.</p>
+
+      <h3>The injury list is an explanation, not an alibi</h3>
+      <p>Carolina's absences were real. It played without wide receivers Mason Humphrey and Keeyun Chapman, defensive backs Tre Miller and Jakob Weatherspoon, defensive linemen Viliami Moala, Vodney Cleveland and Jimmy-Phrisco Alo-Suliafu and linebacker Ashton Blatt, with Kaleb Cost a game-time decision. Andrew Threatt left in the second quarter. That's ten players out, questionable or hurt during the game, and most of them are on the defensive front and in the secondary, which helps explain why the defense wore down against 83 snaps. Syracuse has had its own trouble at quarterback all year, with Odom and Nelson both hurt coming in, and any honest account of this game has to say that Angeli, who was also on the injury list, still threw for 256 yards.</p>
+      <p>My problem with leaning on the injury explanation is that it covers the wrong half of the roster. The offense lost two receivers and a guard and still scored 30 points, gained 372 yards and committed no turnovers. Its failures were failures of decision and execution: the red-zone mix, the fourth-and-3, the sack, the two three-and-outs with a lead. The defense can fairly point to its absences for the missed tackles and the lack of pressure. The offense can't point to anything. A team with a depleted defense has one job when it leads by 10 in the second half, which is to keep that defense off the field, and Carolina's offense ran 23 times and punted twice in a row.</p>
+
+      <h3>The preview math: eight points short</h3>
+      <p>I picked Carolina 31, Syracuse 23. In regulation the final was 23-23, and the comparison is worth a look. Syracuse scored exactly the 23 points I gave it, so the defense gave up what I expected over 60 minutes. Carolina scored 23 against my predicted 31, eight points short, and that shortfall matches the two stalled red-zone drives almost to the point, with four points left behind on each. If the red zone had gone the way I projected, Carolina wins about as I called it, and I'd be writing a very different piece about the second half and the quarterback matchup.</p>
+      <p>That's not an excuse for the pick. I also expected Carolina to win the second half by a wide margin, and Syracuse took it 13-10 in regulation and 21-17 with overtime included. I expected a clear quarterback edge, and Angeli posted the better passer rating and the better numbers when the game was close. I was right about the scoreboard and wrong about what it would be built from. That's a useful lesson in a loss, because Carolina didn't get beaten by a surprising Syracuse team. It got beaten by its oldest problem, an offense that couldn't turn drives into points.</p>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="improve">
+  <div class="wrap">
+    <h2>Areas for Improvement</h2>
+    <div class="prose">
+      <p class="lede">None of what went wrong Saturday was subtle, and none of it was new, which for me is the worst part. A week earlier Carolina led Duke 17-0 and needed a late touchdown to survive. This week it led by 10 twice and didn't survive. The same handful of problems keep turning winnable games into coin flips, and a 4-3 team with Miami coming to town can't keep calling coin flips acceptable.</p>
+
+      <h3>Closing games</h3>
+      <p>UNC has now blown, or nearly blown, a big lead in back-to-back weeks. Against Duke it scored 17 points in the first half and then went more than 41 minutes without scoring until the winning touchdown with under two minutes left. Against Syracuse it led 10-0 and then 20-10 and scored three points over the last 23 minutes of regulation. At Clemson it led 17-6 at halftime and was outscored 22-3 after the break. Belichick said afterward that Carolina is "playing teams that are pretty evenly matched," and I don't buy that for a team that arrived 0-4 in the conference, with an 11-game losing streak and a schedule that ranked 50 spots easier than Carolina's. "Evenly matched" is what you say about the games you should have won.</p>
+      <p>I think the pattern matters more than any single result. Two of these in a row tells me the issue is structural: an offense that goes conservative or stalls when it should be putting a game away, and a defense that tires in the same stretch. Both can be fixed with play-calling and conditioning, and both start with the staff admitting they exist.</p>
+
+      <h3>Red-zone and short-yardage offense</h3>
+      <p>The offense needs a plan for the last 10 yards that doesn't depend on a perfect throw. Carolina threw eight times and ran twice inside the 20. It got two incompletions from inside the 5 when a touchdown would have made it a 10-point lead with seven minutes left, and it needed a fourth-and-1 conversion to score on a drive where a dropped pass had already cost it a touchdown. The backs were productive when they got the ball, 5.2 yards a carry for McGill and a 25-yard touchdown for June. I want to see them used where the field is short, and the first step is admitting that a pass-first approach at the goal line cost points on Saturday.</p>
+
+      <h3>Quarterback consistency and protection</h3>
+      <p>Edwards' first quarter showed what he can be, and the next 45 minutes showed why that version is rare. The footwork that produced short-hopped throws and the open receivers he missed are correctable, but the final sack came on the biggest snap of the night. Protection has to hold when a left guard goes down, as Andrew Threatt did late in the second quarter, and the line has to give Edwards a clean pocket on third down. Two sacks for 16 yards isn't a big number, but they came on a third-down drive-killer with a 10-point lead and on the fourth-and-3 that ended regulation. I care less about how many sacks there were than when they happened, and Carolina's timing was awful.</p>
+
+      <h3>Pass rush and the middle of the defensive line</h3>
+      <p>One sack and one quarterback hit against 34 pass attempts isn't a pass rush. Abou Jaoude had 10.5 sacks last season and three tackles on Saturday, and a hand injury, if that's what's behind it, is a fair explanation for him and no explanation for everyone else. The interior, missing Moala, Cleveland and Alo-Suliafu, gave up 4.1 yards a carry on 49 attempts, a 25-yard run on fourth down in the second quarter and a fourth-and-goal touchdown in overtime. If the front can neither pressure the passer nor hold the point of attack, it hands the game to whoever has the better offensive line and the more patient play-caller, and Saturday that was the team that ran 83 plays.</p>
+
+      <h3>Second-half adjustments</h3>
+      <p>Carolina has been outscored 48-20 after halftime across the Clemson, Duke and Syracuse games, all in regulation, and it led at the break in each. I can't call that a coincidence of three different games. The fix starts with an offensive plan for protecting a lead that doesn't depend on the quarterback completing 20 passes, and a defensive plan for a third quarter in which the front is already tired. Both are staff problems before they're player problems, and the staff has had three games of evidence.</p>
+
+      <h3>Tackling and secondary depth</h3>
+      <p>McDonald blamed missed tackles, and the fact that 68 of Carolina's 98 tackle credits were assists fits what he said. The secondary also dropped two interceptions in the first half, with Willie and Patterson each letting one go, and Thompson nearly had a third in the third quarter. In a game decided by one point in overtime, two dropped interceptions are not a footnote to me. Depth is the bigger worry. Miller and Weatherspoon were out, Cost was a game-time decision, and the group that remained had to cover 34 pass attempts against a quarterback who had all day.</p>
+
+      <h3>Decision-making in the biggest moments</h3>
+      <p>The fourth-and-3 call and the red-zone play-calling come from the same instinct, which is trusting the aggressive option over the percentage one. Sometimes that works, and June's fourth-and-1 run was exactly right. It doesn't work when the aggressive call makes a weak spot the deciding factor. The next test comes fast. Miami, 7-0 and ranked No. 1, arrives at Kenan Stadium on Saturday at 7:30 p.m., and the staff has to decide again how much it trusts an offense that managed three points over its last 23 minutes of regulation against Syracuse.</p>
+
+      <h3>What I'd change this week</h3>
+      <p>I'll put my cards on the table, because it's easy to list problems and harder to say what I'd actually do about them. First, I'd run the ball more, and I'd do it earlier than the staff thinks it needs to. McGill and June combined for 115 yards on 21 carries, and I'd rather see that number go up to 30 carries than watch Edwards drop back 46 times against the No. 1 team in the country. A run game doesn't have to dominate to help. It just has to keep the clock moving and the other offense on the sideline.</p>
+      <p>Second, I'd stop treating the red zone like a passing situation. Eight throws and two runs inside the 20 is a choice, and it's the wrong one for a quarterback who missed two open receivers from inside the 5 on the same drive. Put the ball in a back's hands from the 6, make Syracuse, or Miami, tackle somebody, and live with a field goal if it doesn't work. At least that would be a field goal on a drive that tried the thing most likely to score.</p>
+      <p>Third, I'd kick the field goal on the next fourth-and-3 in a tie game with a kicker who hasn't missed. I know the arithmetic about field position. I still think you take the points when the points win you the game, or at minimum push the game to overtime on your terms. And fourth, I'd have a real plan for the third quarter on defense. Rotate the fronts earlier, call something that gets a rusher home before the fourth quarter and stop acting surprised when a tired unit gives up the long play. None of this is revolutionary. It's just a list of things this team has had three games to learn.</p>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="grades">
+  <div class="wrap">
+    <h2>Position Group Breakdown and Grades</h2>
+    <div class="prose">
+      <p class="lede">These grades are mine, and they're built from the box score, the scoring summary and the game accounts, not from film or snap counts. I graded hard on purpose. Blocking and coverage are judged by results, and the official numbers don't separate corners from safeties, so I graded the defensive backs as one group.</p>
+
+      <ul class="gradegrid">
+        <li><a href="#g-qb"><span class="grade g-c">C</span>Quarterback</a></li>
+        <li><a href="#g-rb"><span class="grade g-cplus">C+</span>Running backs</a></li>
+        <li><a href="#g-te"><span class="grade g-cplus">C+</span>Tight ends</a></li>
+        <li><a href="#g-wr"><span class="grade g-cplus">C+</span>Wide receivers</a></li>
+        <li><a href="#g-ol"><span class="grade g-c">C</span>Offensive line</a></li>
+        <li><a href="#g-dl"><span class="grade g-d">D</span>Defensive line</a></li>
+        <li><a href="#g-lb"><span class="grade g-c">C</span>Linebackers</a></li>
+        <li><a href="#g-db"><span class="grade g-dplus">D+</span>Secondary</a></li>
+        <li><a href="#g-st"><span class="grade g-b">B</span>Special teams</a></li>
+        <li><a href="#g-co"><span class="grade g-dplus">D+</span>Coaching</a></li>
+      </ul>
+
+      <h3 class="pg" id="g-qb"><span class="grade g-c">C</span>Quarterback</h3>
+      <ul class="keys"><li>27 of 44</li><li>271 yards</li><li>2 TD, 0 INT</li><li>2 sacks, 16 yards</li></ul>
+      <p>Billy Edwards Jr. had a season-high 271 yards, completed 61 percent of his passes and didn't throw an interception, and that's the version of his night that fits on a stat line. The version that fits on a scoreboard is different. He completed his first 11 attempts for 98 yards and a touchdown, then went 16-of-33 for 173 yards and one touchdown, 48 percent over the final three-plus quarters. He averaged 6.2 yards per attempt, his longest completion was 28 yards, and he threw to eight different receivers without finding one who could turn a short completion into a big gain.</p>
+      <p>The misses bother me because they were avoidable. His footwork produced short-hopped throws into the turf, he missed open receivers who could have added big plays, and he took two sacks at the worst moments, one on a third-down drive-killer with a 10-point lead and the other on the fourth-and-3 that ended regulation. He also never threw the ball to the wrong team, and he led the touchdown drive in overtime, and I do give him credit for that. Next to Steve Angeli it's not a flattering comparison. Angeli completed 59 percent, averaged 7.5 yards per attempt and posted the better passer rating, 141.5 to Edwards' 128.1, and he was far better in the stretch that decided the game. I called the quarterback matchup lopsided in Carolina's favor before the game. It wasn't, and that's on me.</p>
+
+      <h3 class="pg" id="g-rb"><span class="grade g-cplus">C+</span>Running backs</h3>
+      <ul class="keys"><li>McGill 12 for 62</li><li>June 9 for 53, TD</li><li>Team 25 for 101</li></ul>
+      <p>The backs were better than the offense's use of them suggests. Jaylen McGill, the sophomore, led the team with 12 carries for 62 yards, 5.2 per carry, and with Benjamin Hall not playing he became the lead back. Demon June had five carries for 18 yards in the first half and then four for 35 after halftime, including the 25-yard touchdown on fourth-and-1 that made it 20-10. He also caught the 3-yard touchdown pass in overtime. Neither back fumbled, and the team had no turnovers.</p>
+      <p>My complaint is the volume. Carolina called only 23 runs in a game it led for roughly 55 of 60 minutes, and the official line of 101 yards on 25 attempts, 4.0 per carry, includes the two sacks, which the ledger counts as rushes, plus two other short carries. McGill and June alone ran 21 times for 115 yards, 5.5 per carry. If you want to protect a lead and move the ball in short yardage, I don't know a better tool than a back averaging better than five yards a carry, and Carolina left that tool in the box. McGill and June earned more work and didn't get it. I think the Tar Heels paid for that.</p>
+
+      <h3 class="pg" id="g-te"><span class="grade g-cplus">C+</span>Tight ends</h3>
+      <ul class="keys"><li>Thurman 7 for 77</li><li>Washington dropped TD</li></ul>
+      <p>Jelani Thurman caught seven passes for 77 yards, 11.0 per catch, and was the most dependable target after Shipp. He accounts for seven of the 27 completions and 77 of the 271 yards, and he gave Edwards a reliable outlet in a game where the quarterback's accuracy wavered. He didn't score, and the group never produced a play longer than 28 yards, which was the ceiling for the whole offense.</p>
+      <p>One play holds the grade down. Early in the second half, on third-and-1 after a play fake, Edwards threw deep to tight end Jordan Washington, who was alone in the end zone, and the ball went off his hands. It cost nothing on the scoreboard only because June ran 25 yards for the touchdown on the next snap, on fourth-and-1. If June gets stopped, that's the most expensive drop of the season. One drop doesn't define a position group, but a walk-in touchdown is the one catch a tight end can't miss, and I wasn't going to give a group a B for that in a one-point loss.</p>
+
+      <h3 class="pg" id="g-wr"><span class="grade g-cplus">C+</span>Wide receivers</h3>
+      <ul class="keys"><li>Shipp 8 for 102, TD</li><li>Others 12 for 92</li><li>Longest catch 28</li></ul>
+      <p>Jordan Shipp was Carolina's best offensive player by a wide margin, with eight catches for 102 yards and a touchdown, plus the 20-yarder to the Syracuse 5 that set up the overtime score. He's the one receiver the passing game can count on, and he said afterward that the missed red-zone chances were the main problem, which was true. The trouble is that his teammates didn't keep up.</p>
+      <p>Wide receivers Mason Humphrey and Keeyun Chapman were out, and the depth behind Shipp showed it. Outside Shipp and Thurman, Carolina's receivers and backs combined for 12 catches and 92 yards across six players, among them Trech Kekahuna, whose big gain helped carry the 71-yard fourth-quarter drive, and June, who caught the overtime touchdown. The longest catch of the day was 28 yards. A group with one reliable target and a handful of useful catches can't beat a team that holds the ball for 31 minutes, and it can't be the only thing standing between a 10-point lead and a punt.</p>
+
+      <h3 class="pg" id="g-ol"><span class="grade g-c">C</span>Offensive line</h3>
+      <ul class="keys"><li>2 sacks, 16 yards</li><li>4.0 yards per carry</li><li>Threatt out late 2Q</li></ul>
+      <p>The raw pass-protection numbers are respectable. Syracuse finished with two sacks and two quarterback hits against 46 Carolina dropbacks, and Edwards had the time to complete his first 11 passes. Run blocking opened the lane for June's 25-yard touchdown and gave McGill 5.2 per carry. Left guard Andrew Threatt left late in the second quarter.</p>
+      <p>Where the game was decided is a different story. The line couldn't turn a 13-play drive into a touchdown, couldn't protect Edwards on third down with a 10-point lead and couldn't buy him time on the fourth-and-3 that ended regulation. Both sacks came in situations that cost the offense points or the game. Carolina scored three points in its last four possessions of regulation, and I think the line's fingerprints are all over that stretch. It gets a C because the totals were fine and the timing wasn't, and in a one-point loss timing is the whole grade.</p>
+
+      <h3 class="pg" id="g-dl"><span class="grade g-d">D</span>Defensive line</h3>
+      <ul class="keys"><li>1 sack, 1 QB hit</li><li>2 TFL, 17 yards</li><li>199 rushing yards allowed</li></ul>
+      <p>The line produced one sack, one quarterback hit and two tackles for loss totaling 17 yards over 83 Syracuse snaps. It was missing Viliami Moala, Vodney Cleveland and Jimmy-Phrisco Alo-Suliafu, and the rotation that remained had to rush the passer, hold the point of attack and survive 49 rushing attempts. Melkart Abou Jaoude, who had 10.5 sacks last season, finished with three tackles and almost no pressure, and the group as a whole let Angeli sit comfortably in the pocket for most of the night.</p>
+      <p>Syracuse rushed for 199 yards and two touchdowns, 4.1 per carry, and Ahmad Miller had 30 carries for 125 yards. The front wasn't getting blown off the ball so much as ground down, which I find worse, because it means almost every snap was winnable and few were won. Jaylen Harvey and Derek McDonald did stuff Miller for a loss in overtime, and that's the one real positive. Everything else, from a 16-play touchdown drive to a 25-yard fourth-down run and two short touchdown runs, tells me this group couldn't control the line of scrimmage. The injuries explain a good chunk of it. I gave it a D because the production was that low.</p>
+
+      <h3 class="pg" id="g-lb"><span class="grade g-c">C</span>Linebackers</h3>
+      <ul class="keys"><li>McDonald 16 tackles</li><li>Tackle for loss in OT</li><li>Blatt out</li></ul>
+      <p>Derek McDonald, playing against his former team, was the defense's most visible player, with 16 tackles, sideline-to-sideline range and the stop with Harvey on Miller in overtime. He played hard and he played well, linebacker Ashton Blatt was out, and Peyton Seelmann's well-timed blitz produced the defense's only sack, on Syracuse's last drive of regulation. McDonald also said afterward that missed tackles were a problem, and the numbers back him up. Carolina was credited with 98 tackles, 68 of them assists, which is what a defense looks like when the first man can't finish.</p>
+      <p>Linebackers are the connective tissue between a front that isn't winning and a secondary that's exposed, and on Saturday the connection frayed. Miller carried 30 times, Syracuse ran 49 times as a team and the Orange converted fourth downs in key moments. McDonald's volume reflects the workload as much as the performance. A linebacker who makes 16 tackles is also a linebacker who spent the night cleaning up after a front that wasn't winning, and in a one-point game cleaning up isn't enough. I gave the group a C for the effort, with a ceiling set by the players around it.</p>
+
+      <h3 class="pg" id="g-db"><span class="grade g-dplus">D+</span>Secondary</h3>
+      <ul class="keys"><li>76-yard TD allowed</li><li>2 dropped INTs</li><li>Angeli 11 of 14 late</li></ul>
+      <p>The secondary gave up the longest play Carolina's defense has allowed all season, Hatcher's 76-yard touchdown, on a play fake that left safety Greg Smith III overrunning the play. Through three quarters Angeli was 9-of-20 for 83 yards. After that he was 11-of-14 for 173, and even with the 76-yarder removed it was 10-of-13 for 97. The group was without Tre Miller and Jakob Weatherspoon, Kaleb Cost was a game-time decision, and the defensive backs who did play had to cover a quarterback with all day to throw.</p>
+      <p>The group also missed two chances to change the game. Ade Willie and Jaden Patterson each dropped an interception in the first half, and Jalon Thompson nearly had one in the third quarter. That's three chances at a takeaway, none converted, in a game that ended with no turnovers on either side. The back end then gave up a 16-yard completion in overtime, a 4-yard touchdown on fourth down and the two-point conversion, and a secondary that had missed its earlier chances couldn't make the plays overtime required. The injuries explain the thinness. They don't explain the drops. D+.</p>
+
+      <h3 class="pg" id="g-st"><span class="grade g-b">B</span>Special teams</h3>
+      <ul class="keys"><li>Verhoff 3 of 3 FG</li><li>3 punts, 42.7 average</li><li>Kick returns allowed: 19.0</li></ul>
+      <p>Special teams were the one phase where Carolina did what it was supposed to do. Rece Verhoff made all three field goals, from 27, 39 and 22 yards, and all three extra points. The punt unit averaged 42.7 yards on three punts, with a long of 47 and a net of 40.0, none inside the 20 but none blocked and none returned for real yardage, since Syracuse got only eight yards on two returns. Carolina's own punt returners had two returns for 22 yards.</p>
+      <p>Kickoff coverage was the one soft spot. Syracuse returned three of Carolina's six kickoffs for 57 yards, a 19.0 average with a long of 24, and the other three went for touchbacks. Carolina's own return game was one return for 17 yards. Carolina's net punting average of 40.0 beat Syracuse's 38.0. Special teams didn't lose this game. I gave it a B because the kicker was perfect and nothing in the kicking game cost points, with the coverage as the only mark against it.</p>
+
+      <h3 class="pg" id="g-co"><span class="grade g-dplus">D+</span>Coaching and game management</h3>
+      <ul class="keys"><li>46 dropbacks, 23 runs</li><li>8 red-zone passes, 2 runs</li><li>4th-and-3 from the 39</li></ul>
+      <p>Bill Belichick's postgame news conference lasted 2 minutes and 58 seconds, the shortest of his time at Carolina, and it matched the afternoon: "They made a couple more plays than we did today, and that was the difference in the game." The game plan worked for one quarter and then, in my view, got abandoned. Carolina called 46 dropbacks and 23 runs, threw eight times and ran twice inside the 20 and, with a 10-point lead and a defense short on bodies, never leaned on backs who averaged 5.5 yards a carry. Bobby Petrino calls the plays, and the complaint after Clemson was that his second-half sequencing abandoned a run game that could have produced a big day. It was the same complaint on Saturday, with an even better reason to make it.</p>
+      <p>The decisions at the edges were poor too. Going for it on fourth-and-3 from the Syracuse 39, with a kicker who was 3-for-3, a tie game and overtime waiting, is defensible as arithmetic. Belichick's point that a miss would have handed Syracuse about seven extra yards is real. But I find it hard to defend when the alternative puts the ball in the hands of a quarterback who had completed 48 percent of his passes since the first quarter. On defense the staff produced one sack and one three-and-out against 83 snaps and found no adjustment after halftime that slowed a ground game averaging 4.1 yards a carry. The one clean piece of coaching was the fourth-and-1 call that June turned into a 25-yard touchdown, and it came right after a walk-in touchdown got dropped. For a team in its second year under a coach hired to win games like this one, losing a game it led by 10 in the second half, a week after almost blowing a 17-0 lead against Duke, isn't bad luck. D+.</p>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="report">
+  <div class="wrap">
+    <h2>Report Card and What It Means Going Forward</h2>
+    <div class="prose">
+      <div class="verdict">
+        <span class="grade g-dplus">D+</span>
+        <p>I'm giving UNC an overall D+. The position groups average out to something near a C-, and the way this one was lost drags it lower. A team that leads by 10 twice, commits no turnovers and takes three penalties shouldn't lose at home to a team that was 0-4 in the ACC.</p>
+      </div>
+
+      <div class="report-wrap">
+        <table class="report">
+          <thead><tr><th scope="col">Group</th><th scope="col">Grade</th><th scope="col">Deciding factor</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Quarterback</th><td class="gr"><span class="grade g-c">C</span></td><td>27-of-44 for 271 and no turnovers, but 16-of-33 after a perfect start and the sack that ended regulation</td></tr>
+            <tr><th scope="row">Running backs</th><td class="gr"><span class="grade g-cplus">C+</span></td><td>5.5 per carry for McGill and June together and a 25-yard touchdown, on only 23 designed runs in a game Carolina led for 55 minutes</td></tr>
+            <tr><th scope="row">Tight ends</th><td class="gr"><span class="grade g-cplus">C+</span></td><td>Thurman's seven catches for 77 yards, offset by Washington's dropped walk-in touchdown</td></tr>
+            <tr><th scope="row">Wide receivers</th><td class="gr"><span class="grade g-cplus">C+</span></td><td>Shipp had eight for 102; everyone else, backs included, had 12 for 92 and nothing longer than 28 yards</td></tr>
+            <tr><th scope="row">Offensive line</th><td class="gr"><span class="grade g-c">C</span></td><td>Two sacks and two hits on 46 dropbacks, but both sacks came at the worst possible moments</td></tr>
+            <tr><th scope="row">Defensive line</th><td class="gr"><span class="grade g-d">D</span></td><td>One sack, two tackles for loss and 199 rushing yards allowed on 49 carries</td></tr>
+            <tr><th scope="row">Linebackers</th><td class="gr"><span class="grade g-c">C</span></td><td>McDonald's 16 tackles and an overtime stop, against 68 assisted tackles as a unit</td></tr>
+            <tr><th scope="row">Secondary</th><td class="gr"><span class="grade g-dplus">D+</span></td><td>The 76-yard touchdown, two dropped interceptions and the overtime two-point play</td></tr>
+            <tr><th scope="row">Special teams</th><td class="gr"><span class="grade g-b">B</span></td><td>Verhoff 3-for-3 on field goals; kick coverage the only soft spot</td></tr>
+            <tr><th scope="row">Coaching and game management</th><td class="gr"><span class="grade g-dplus">D+</span></td><td>Red-zone call mix, two lost 10-point leads and the fourth-and-3 decision</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>Next up is Miami. The Hurricanes are 7-0 overall and 5-0 in the ACC, ranked No. 1, and they beat Pittsburgh 52-23 on Saturday. They're at Kenan Stadium on Halloween at 7:30 p.m. on ABC, and Carolina will almost certainly be a heavy underdog. I don't see how a defense that forced one three-and-out against Syracuse and got to the quarterback once is set up for a team like that, and an offense that stalled inside the 10 twice will have to find a way to finish drives against a far better defense. Belichick's summary was that there wasn't too much to say about this one. I think there's a lot to say, and most of it needs to be said inside the building before Saturday.</p>
+      <p>The bigger question for me is what this loss does to the rest of the season. UNC is 4-3 and needs two more wins for bowl eligibility. After Miami the schedule is a trip to UConn on November 7, Louisville at home on November 14, a trip to Virginia on November 21 and NC State at home on November 28. On paper that's a manageable path. It also looked manageable before Syracuse showed up 0-4 in the ACC and left with a win. Syracuse's only other win over an FBS team was a 42-41 overtime escape against UConn, and Carolina couldn't beat the Orange in regulation either.</p>
+      <p>Before Miami, UNC has to fix what actually lost this game: finishing in the red zone, closing out a double-digit lead, pressuring a quarterback and getting off the field. None of that is a mystery, and I don't think any of it is about talent. The injury list is long and it explains some of the defensive struggles. It doesn't explain throwing eight times and running twice inside the 20, a fourth-and-3 call with the game tied and overtime waiting, or an offense that never scored a touchdown in regulation after the third quarter. A 4-3 team with the No. 1 team in the country next and a bowl bid still to earn has no room for another night like this one.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+
+</body></html>
